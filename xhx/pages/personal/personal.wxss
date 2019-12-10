@@ -1,0 +1,115 @@
+page{
+  background-color: #f5f5f5;
+}
+.person-head{
+  width: 100%;
+  height: 238rpx;
+  background-color:  #d01c95;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.user-head{
+  display: block;
+  width: 112rpx;
+	height: 112rpx;
+  box-sizing: border-box;
+  border-radius: 56rpx;
+}
+.user-name{
+  margin-left: 20rpx;
+  font-size: 34rpx;
+  color: #ffffff;
+}
+.my-wrap{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 180rpx;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 60rpx;
+}
+.img-wrap{
+  margin: 0 auto;
+  width: 50rpx;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.my-item .my-text{
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  color: #1a1a1a;
+}
+.list-wrap{
+  margin-top: 20rpx;
+  background-color: #ffffff;
+  width: 100%;
+  padding-left: 30rpx;
+}
+.list-item{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f5f5f5;
+  box-sizing: border-box;
+  padding-left: 10rpx;
+}
+.list-item image{
+  width: 32rpx;
+  height: 32rpx;
+}
+.item-name{
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #1a1a1a;
+}
+.select{
+  box-sizing: border-box;
+  width: 100%;
+  height: 70rpx;
+  border:1px solid #efefef;
+  border-radius: 8rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+}
+.select_text{
+  font-size: 30rpx;
+  flex:1;
+}
+.select_img {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  position: relative;
+  top: 10rpx;
+  transition:transform 0.3s;
+}
+.select_img_rotate {
+  transform: rotate(180deg);
+}
+.option_box {
+  position: absolute;
+  top: 70rpx;
+  width: 100%;
+  border:1px solid #efefef;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border-top: 0;
+  background: #fff;
+  transition: height 0.3s;
+}
+.option {
+  line-height: 100rpx;
+  height: 100rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #efefef;
+  padding-left: 50rpx;
+}

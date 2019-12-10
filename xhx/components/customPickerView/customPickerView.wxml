@@ -1,0 +1,19 @@
+<!--components/customPickerView.wxml-->
+<view class='picker-view-container'>
+    <view class='picker-view-titles'>
+      <view class='picker-view-title-item'>
+        开始时间
+      </view>
+      <view class='picker-view-title-item'>
+        结束时间
+      </view>
+    </view>
+    <picker-view indicator-class='picker-view-indicator' style='height:{{pickerHeight}}rpx' class="picker-view" value="{{pickerIndexes}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{startTimePeriods}}" wx:key='{{item.timestamp}}'>{{item.timeDesc}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{endTimePeriods}}" wx:key='{{item.timestamp}}'>{{item.timeDesc}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>

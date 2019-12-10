@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "按车位查询",
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#e6e6e6",
+  "enablePullDownRefresh": true,
+  "usingComponents": {}
+}

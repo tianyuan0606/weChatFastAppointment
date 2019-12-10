@@ -1,0 +1,40 @@
+<!--pages/lockcontrol/lockcontrol.wxml-->
+<view>
+  <!-- 搜索框 -->
+  <view class='search-bar'>
+    <view class='search-frame'>
+      <image class='image-search' src='../../assets/icon/parking_seach@3x.png'></image>
+      <input bindinput='onChangeSearchKeyword' placeholder='请输入未发布的车位编号' class='search-input' value="{{searchKeyword}}"></input>
+    </view>
+  </view>
+  <!-- 停车场列表 -->
+  <view>
+    <view wx:for="{{parkingList}}" class='table-cell' bindtap='onClickParkingListItem' data-index="{{index}}">
+      <image class='image-parking' src='../../assets/icon/ic_parking.png'></image>
+      <text class='parking-name'>{{item.parklocNumber}}</text>
+      <image class='button-select' src="{{selectedIndex[index]?imagePath.selected:imagePath.nonSelected}}"></image>
+    </view>
+  </view>
+  <!-- 操作栏 -->
+  <view class='operation-bar'>
+    <image bindtap='onClickSelectAll' class='button-select-all' src='{{selectAll?imagePath.selected:imagePath.nonSelected}}'></image>
+    <view class='text-select-all'>全选</view>
+    <view class='text-selected'>已选：</view>
+    <view class='text-selected-num'>{{selectedNum}}</view>
+    <view bindtap='onClickControlLock' class='button-control-locks'>控制车锁</view>
+  </view>
+
+  <!--升降按钮开始-->
+  <view class='control-wrap' wx:if='{{controlFlag}}' catchtouchmove="catchtouchmove">
+    <view class='control-content'>
+      <view class='control-title'>控制车锁</view>
+      <view class='control-btn'>
+        <image class='control-open' bindtap='controlCarlock' data-command='1' src='/assets/icon/ic_lock_control_up.png'></image>
+        <image class='control-close' bindtap='controlCarlock' data-command='2' src='/assets/icon/ic_lock_control_down.png'></image>
+      </view>
+      <view class='controlwrap-close' bindtap='closeControlDialog'>关闭</view>
+    </view>
+  </view>
+  <!--升降按钮结束-->
+
+</view>

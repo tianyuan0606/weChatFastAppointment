@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "按时段查询",
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#e6e6e6",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "custom-picker-view": "../../components/customPickerView/customPickerView"
+  }
+}

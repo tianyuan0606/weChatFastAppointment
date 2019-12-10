@@ -1,0 +1,43 @@
+<!--pages/parkingsearchbytime/parkingsearchbytime.wxml-->
+<view>
+  <view class='select-wrapper' bindtap='onSelectClicked'>
+    <view class='search-text'>选择时间段</view>
+    <view class='arrow'>></view>
+    <view class='search-time'>{{searchTime}}</view>
+  </view>
+
+  <view class='picker-wrapper' wx:if='{{showPicker}}'>
+    <view class='picker-mask' bindtap='onMaskClicked'></view>
+    <custom-picker-view
+      minDuration='{{minDuration}}'
+      firstStartTimestamp='{{firstStartTimestamp}}'
+      bind:getSelectedTimePeriod="getSelectedTimePeriod"
+      pickerHeight='{{pickerHeight}}'
+      class='picker-content'
+    >
+    </custom-picker-view>
+  </view>
+  
+  <view class='result-wrapper' wx:if="{{parkingResult.length!=0}}">
+    <view class='result' wx:for="{{parkingResult}}" wx:key="{{index}}">
+      <view class='number-wrapper'>
+        <!-- <image class='number-image' src="../../assets/icon/parking_number.png"></image> -->
+        <view class='parking-number'>{{item.parklocId}}</view>
+      </view>
+      <view class='time-wrapper'>
+        <image class='time-image' src="../../assets/icon/mine_time@3x.png"></image>
+        <view class='parking-time'>{{item.publishList[0].startTime}} - {{item.publishList[0].endTime}}</view>
+      </view>
+      <view class='name-wrapper'>
+        <image class='name-image' src="../../assets/icon/ic_parking_pos.png"></image>
+        <view class='parking-name'>{{item.parklotName}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='no-result-wrapper' wx:else>
+    <icon class='info-icon' type='info' size='60' color='lightgray'></icon>
+    <text class='info-text'>暂无结果</text>
+  </view>
+  
+</view>

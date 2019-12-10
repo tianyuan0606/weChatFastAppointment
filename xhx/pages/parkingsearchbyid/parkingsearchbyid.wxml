@@ -1,0 +1,29 @@
+<!--pages/parkingsearchbyid/parkingsearchbyid.wxml-->
+<view>
+  <view class='search-wrapper' >
+    <icon class='search-icon' type='search' size='20'></icon>
+    <input class='search-input' placeholder-class='search-input-placeholder' type='number' placeholder='请输入车位编号' bindblur='onInputBlur'></input>
+  </view>
+
+  <view class='result-wrapper' wx:if="{{parkingResult.length!=0}}">
+    <view class='result' wx:for="{{parkingResult}}" wx:key="{{index}}">
+      <view class='number-wrapper'>
+        <!-- <image class='number-image' src="../../assets/icon/parking_number.png"></image> -->
+        <view class='parking-number'>{{item.parklocId}}</view>
+      </view>
+      <view class='time-wrapper'>
+        <image class='time-image' src="../../assets/icon/mine_time@3x.png"></image>
+        <view class='parking-time'>{{item.publishList[0].startTime}} - {{item.publishList[0].endTime}}</view>
+      </view>
+      <view class='name-wrapper'>
+        <image class='name-image' src="../../assets/icon/ic_parking_pos.png"></image>
+        <view class='parking-name'>{{item.parklotName}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='no-result-wrapper' wx:else>
+    <icon class='info-icon' type='info' size='60' color='lightgray'></icon>
+    <text class='info-text'>暂无结果</text>
+  </view>
+</view>

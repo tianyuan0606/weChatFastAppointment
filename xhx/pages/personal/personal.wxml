@@ -1,0 +1,72 @@
+<!--logs.wxml-->
+<view class="container">
+  <view class='person-head' bindtap='goLogin'>
+    <image src='{{headSrc}}' class='user-head'></image>
+    <view class='user-name'>{{userName}}</view>
+  </view>
+  <!-- <view class='my-wrap'>
+    <view class='my-item'>
+      <view class='img-wrap'>
+        <image src='/assets/icon/ic_wallet.png' style='width:39rpx;height:36rpx;'></image>
+      </view>
+      <view class='my-text'>我的钱包</view>
+    </view>
+    <view class='my-item' bindtap='goMyCoupon'>
+      <view class='img-wrap'>
+        <image src='/assets/icon/ic_card.png' style='width:42rpx;height:36rpx;'></image>
+      </view>
+      <view class='my-text'>我的卡券</view>
+    </view>
+    <view class='my-item'>
+      <view class='img-wrap'>
+        <image src='/assets/icon/ic_activity.png' style='width:44rpx;height:39rpx;'></image>
+      </view>
+      <view class='my-text'>我的活动</view>
+    </view>
+  </view> -->
+  <view class='list-wrap'>
+    <view class='list-item' bindtap='goMyPlate'>
+      <image src='/assets/icon/mine_car@3x.png'></image>
+       <view class='item-name'>我的车辆</view>
+    </view>
+    <view class='list-item' bindtap='chooseParklot' wx:if="{{!isCarOwner}}">
+      <image src='/assets/icon/mine_lot@3x.png'></image>
+       <view class='item-name'>发布车位</view>
+    </view>
+    <view class='list-item' bindtap='goMyParking' wx:if="{{!isCarOwner}}">
+      <image src='/assets/icon/mine_search@3x.png'></image>
+       <view class='item-name'>查看发布</view>
+    </view>
+    <view class='list-item' bindtap='viewBills' wx:if="{{isLoginFlag}}">
+      <image src='/assets/icon/mine_setting@2x.png'></image>
+       <view class='item-name'>查看订单</view>
+    </view>
+    <view class='list-item' bindtap='exit' wx:if="{{isLoginFlag}}">
+      <image src='/assets/icon/mine_setting@2x.png'></image>
+       <view class='item-name'>退出登录</view>
+    </view>
+    <view>
+      <modal show="{{showModal}}" height='60%' bindcancel="modalCancel" bindconfirm="modalConfirm">
+      <view class="select" catchtap='selectTap'>
+          <text>{{index<0?'请选择你的停车场':parklotList[index].name}}</text>
+          <image class='select_img {{show&&"select_img_rotate"}}' src='/assets/icon/arrows.jpg'></image>
+      </view>
+        <view class="option_box" style='height: {{show?(parklotList.length>5?300:parklotList.length*100):0}}rpx'>
+         <view class='option'  wx:for='{{parklotList}}' wx:key='{{item.id}}' data-index='{{index}}' catchtap='optionTap'>
+          {{item.name}}
+         </view>
+        </view>
+      </modal>
+    </view>
+    <!-- @控制车锁页面暂时删除 -->
+    <!-- <view class='list-item' bindtap='goLockControl'>
+      <image src='/assets/icon/mine_lock@3x.png'></image>
+       <view class='item-name'>控制车锁</view>
+    </view> -->
+
+    <!-- <view class='list-item'>
+      <image src='/assets/icon/mine_setting@2x.png'></image>
+       <view class='item-name'>更多设置</view>
+    </view> -->
+  </view>
+</view>

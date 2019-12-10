@@ -1,0 +1,9 @@
+<!--pages/parkinglist/parkinglist.wxml-->
+<view class='list-wrap'>
+  <view bindtap='onSearchTypeClicked'>
+    <view class="list-item" wx:for="{{searchBy}}" wx:key="{{index}}" id="{{index}}">
+      <image src='{{searchBy[index].imagePath}}'></image>
+      <view class="item-name" id="{{index}}">{{item.title}}</view>
+    </view>
+  </view>
+</view>

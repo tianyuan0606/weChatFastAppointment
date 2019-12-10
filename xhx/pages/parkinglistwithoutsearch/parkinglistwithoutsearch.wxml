@@ -1,0 +1,33 @@
+<view>
+  <view wx:if="{{parkingResult.length!=0}}" >
+    <view wx:for="{{parkingResult}}">
+      <!-- 车位 -->
+      <view class='item-wrap'>
+        <image class='parking-image' src='/assets/icon/ic_parking_pos.png'></image>
+        <view class='parking-name'>车场 : {{item.parklotName}}</view>
+      </view>
+      <view class='item-wrap'>
+        <image class='parking-image' src='/assets/icon/ic_parking.png'></image>
+        <view class='parking-name'>车锁 : {{item.parklocNumber}}</view>
+      </view>
+      <!-- 时间 -->
+      <view wx:for="{{item.publishList}}" wx:for-index="publishIndex" wx:for-item="publishItem" class='item-wrap'>
+        <image class='item-image' src='/assets/icon/mine_time@3x.png'></image>
+        <view class='item-time'>{{publishItem.startTime}}-{{publishItem.endTime}}</view>
+        <view class='item-time'>{{publishItem.repeat}}</view>
+        <image bindtap='onClickPublishItem' data-parking-index='{{index}}' data-publish-index='{{publishIndex}}' class='button-select' src="{{publishItem.selected?imagePath.selected:imagePath.nonSelected}}"></image>
+      </view>
+      <!-- 操作栏 -->
+      <view class='operation-bar'>
+        <image bindtap='onClickSelectAll' class='button-select-all' src='{{selectAll?imagePath.selected:imagePath.nonSelected}}'></image>
+        <view class='text-select-all'>全选</view>
+        <view bindtap='onClickPublishCancel' class='button-control-locks'>取消发布</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='no-result-wrapper' wx:else>
+    <icon class='info-icon' type='info' size='60' color='lightgray'></icon>
+    <text class='info-text'>暂无结果</text>
+  </view>
+</view>

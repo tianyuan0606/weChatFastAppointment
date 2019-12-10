@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "车位发布",
+  "usingComponents": {
+    "custom-picker-view": "../../components/customPickerView/customPickerView"
+  }
+}

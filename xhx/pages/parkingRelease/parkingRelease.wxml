@@ -1,0 +1,43 @@
+<view>
+  <custom-picker-view
+    minDuration='{{minDuration}}'
+    firstStartTimestamp='{{firstStartTimestamp}}'
+    bind:getSelectedTimePeriod="getSelectedTimePeriod"
+    pickerHeight='{{pickerHeight}}'
+    >
+  </custom-picker-view>
+  <view class='parking-count-container common-container'>
+    <view class='parking-count-label'>车位数量</view>
+    <input type='number'
+      class='parking-count'
+      placeholder='当前时段可发布{{avaliableParkingCount}}个车位'
+      placeholder-class='placeholder'
+      value='{{parkingCount}}'
+      bindinput='inputParkingCount'></input>
+  </view>
+  <view class='auto-publish-container common-container'>
+    <view class='auto-publish-header'>
+      <view class='auto-publish-label'>自动发布</view>
+      <switch bindchange="switchAutoPublish" color='#d01c95'/>
+    </view>
+    <view class='weekdays-container' wx:if='{{isAutoPublish}}'>
+      <view
+        class='week-days'
+        wx:for="{{weekDays}}"
+        wx:key='{{index}}'
+        data-index='{{index}}'
+        style="border-color:{{item.isSelected == true?'#d01c95':'#dddddd'}};background-color:{{item.isSelected == true? '#fddff7': 'transparent'}}"
+        bindtap='selectWeekdays'>
+        {{item.name}}
+      </view>
+    </view>
+  </view>
+  <view class='auto-publish-prompt' wx:if='{{isAutoPublish}}'>
+    <text>温馨提示</text>
+    <text>1.请勾选您要自动发布的时间。</text>
+    <text>2.每到您指定的时间，车位将按照开始时间和结束时间自动发布。</text>
+  </view>
+  <view class='submit-container'>
+    <view class='submit-button' bindtap='publishParking'>发布</view>
+  </view>
+</view>

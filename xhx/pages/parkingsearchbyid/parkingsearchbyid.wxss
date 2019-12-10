@@ -1,0 +1,68 @@
+/* pages/parkingsearchbyid/parkingsearchbyid.wxss */
+page{
+  background-color: #f5f5f5;
+}
+.search-wrapper{
+  height: 100rpx;
+  line-height: 100rpx;
+  background:#fff;
+}
+.search-icon{
+  margin: 10rpx 20rpx 0 50rpx;
+}
+.search-input{
+  display: inline-block;
+  width:80%;
+}
+.search-input-placeholder, .search-input {
+  color: #1a1a1a;
+  font-size: 30rpx;
+}
+.result-wrapper{
+  height:100%;
+  width: 100%;
+}
+.result{
+  width:100%;
+  height:180rpx;
+  overflow:hidden;
+  margin: 20rpx 0;
+  background: #fff;
+  color: #666666;
+}
+.number-wrapper{
+  float:left;
+  width:180rpx;
+  line-height: 180rpx;
+  margin:0 50rpx;
+  border-right: 1px solid #d01c95;
+  font-size: 80rpx;
+  color: #d01c95;
+}
+.number-image{
+  height: 100rpx;
+  width:100rpx;
+}
+.time-wrapper, .name-wrapper{
+  margin:20rpx;
+}
+.parking-time, .parking-name{
+  display: inline-block;
+  margin: 0 10rpx;
+}
+.time-image, .name-image{
+  display: inline-block;
+  width:36rpx;
+  height:36rpx;
+}
+.no-result-wrapper{
+  position: absolute;
+  top:40%;
+  width:100%;
+}
+.info-icon,.info-text{
+  display: block;
+  text-align: center;
+  margin:10rpx;
+  color: #666666;
+}

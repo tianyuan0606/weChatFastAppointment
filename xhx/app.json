@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/map/map",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/parkingdetails/parkingdetails",
+    "pages/appointment/appointment",
+    "pages/platelist/platelist",
+    "pages/plateadd/plateadd",
+    "pages/login/login",
+    "pages/pay/pay",
+    "pages/coupon/coupon",
+    "pages/order/order",
+    "pages/share/share",
+    "pages/note/note",
+    "pages/personal/personal",
+    "pages/lockcontrol/lockcontrol",
+    "pages/parkingRelease/parkingRelease",
+    "pages/parkinglist/parkinglist",
+    "pages/parkingsearchbyid/parkingsearchbyid",
+    "pages/parkingsearchbytime/parkingsearchbytime",
+    "pages/parkinglistwithoutsearch/parkinglistwithoutsearch",
+    "pages/bills/bills"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于地图展示附近空车位"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,18 @@
+<!--logs.wxml-->
+<view class="content">
+  
+  <!-- 登录界面 -->
+  <view wx:if="{{authSetting}}">
+    <view>
+      <image class='image-login' src='../../assets/icon/ic_login.png'></image>
+    </view>
+    <view class='text-app-name'>随你停</view>
+    <view class='text-introduction'>申请获取你的公开信息（昵称、头像等）</view>
+    <view>
+      <button wx:if="{{canIUse}}" open-type='getUserInfo' lang='zh_CN' bindgetuserinfo='onGotUserInfo' class='button-authorization'>确认授权</button>
+    </view>
+  </view>
+  <!-- 加载用户信息界面 -->
+  <canvas wx:else="{{authSetting}}" class='canvas-style' canvas-id="firstCanvas"></canvas>
+
+</view>

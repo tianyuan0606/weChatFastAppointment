@@ -1,0 +1,85 @@
+/* pages/parkinglistwithoutsearch/parkinglistwithoutsearch.wxss */
+page {
+  background-color: #f5f5f5;
+}
+.item-wrap {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f5f5f5;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  background-color: white;
+}
+.item-image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.parking-image {
+  width: 48rpx;
+  height: 48rpx;
+}
+.item-time {
+  display: inline-block;
+  font-size: 14px;
+  color: #1a1a1a;
+  margin-left: 14rpx;
+}
+.parking-name {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 20rpx;
+  color: #1a1a1a;
+}
+.operation-bar {
+  height: 48px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-top: #cccccc 1px solid;
+  background-color: #ffffff;
+}
+.button-select-all {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  padding: 5px;
+  left: 7px;
+  bottom: 9px;
+}
+.text-select-all {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 48px;
+  margin-left: 42px;
+}
+.button-control-locks {
+  float: right;
+  width: 130px;
+  height: 48px;
+  background-color: #d01c95;
+  font-size: 18px;
+  line-height: 48px;
+  color: white;
+  text-align: center;
+}
+.button-select {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  padding: 5px;
+}
+.no-result-wrapper{
+  position: absolute;
+  top:40%;
+  width:100%;
+}
+.info-icon,.info-text{
+  display: block;
+  text-align: center;
+  margin:10rpx;
+  color: #666666;
+}

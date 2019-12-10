@@ -1,0 +1,78 @@
+/* pages/parkingsearchbytime/parkingsearchbytime.wxss */
+page{
+  background-color: #f5f5f5;
+}
+.select-wrapper{
+  width: 100%;
+  height:120rpx;
+  line-height: 120rpx;
+  background: #fff;
+}
+.search-text, .search-time, .arrow{
+  display: inline-block;
+  margin: 0 30rpx;
+  color: #666666;
+}
+.search-time, .arrow{
+  float: right;
+  margin: 0 5rpx; 
+  font-size: 30rpx;
+}
+.arrow{
+  margin-right: 30rpx;
+}
+.picker-wrapper, .picker-content{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.picker-wrapper{
+  height:100%;
+  z-index: 100;
+}
+.picker-mask{
+  width:100%;
+  height:100%;
+  opacity: 0;
+}
+.result{
+  width:100%;
+  height:180rpx;
+  overflow:hidden;
+  margin: 20rpx 0;
+  background: #fff;
+  color: #666666;
+}
+.number-wrapper{
+  float:left;
+  width:180rpx;
+  line-height: 180rpx;
+  margin:0 50rpx;
+  border-right: 1px solid #d01c95;
+  font-size: 80rpx;
+  color: #d01c95;
+}
+
+.time-wrapper, .name-wrapper{
+  margin:30rpx;
+}
+.parking-time, .parking-name{
+  display: inline-block;
+  margin: 0 10rpx;
+}
+.time-image, .name-image{
+  display: inline-block;
+  width:36rpx;
+  height:36rpx;
+}
+.no-result-wrapper{
+  position: absolute;
+  top:40%;
+  width:100%;
+}
+.info-icon,.info-text{
+  display: block;
+  text-align: center;
+  margin:10rpx;
+  color: #666666;
+}
